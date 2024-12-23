@@ -44,6 +44,11 @@ Core/Src/usart.c \
 Core/Src/stm32f1xx_it.c \
 Core/Src/stm32f1xx_hal_msp.c \
 Core/Src/stm32f1xx_hal_timebase_tim.c \
+Core/Src/tim.c \
+Core/Src/adc.c \
+Core/Src/sysmem.c \
+Core/Src/syscalls.c  \
+Core/Src/user_led.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c \
@@ -59,6 +64,28 @@ Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c \
 Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c \
+Drivers/DshanMCU-F103/ascii_font.c \
+Drivers/DshanMCU-F103/driver_active_buzzer.c \
+Drivers/DshanMCU-F103/driver_color_led.c \
+Drivers/DshanMCU-F103/driver_dht11.c \
+Drivers/DshanMCU-F103/driver_ds18b20.c \
+Drivers/DshanMCU-F103/driver_ir_obstacle.c \
+Drivers/DshanMCU-F103/driver_ir_receiver.c \
+Drivers/DshanMCU-F103/driver_ir_sender.c \
+Drivers/DshanMCU-F103/driver_irq.c \
+Drivers/DshanMCU-F103/driver_key.c \
+Drivers/DshanMCU-F103/driver_lcd.c \
+Drivers/DshanMCU-F103/driver_led.c \
+Drivers/DshanMCU-F103/driver_light_sensor.c \
+Drivers/DshanMCU-F103/driver_motor.c \
+Drivers/DshanMCU-F103/driver_mpu6050.c \
+Drivers/DshanMCU-F103/driver_oled.c \
+Drivers/DshanMCU-F103/driver_passive_buzzer.c \
+Drivers/DshanMCU-F103/driver_rotary_encoder.c \
+Drivers/DshanMCU-F103/driver_spiflash_w25q64.c \
+Drivers/DshanMCU-F103/driver_timer.c \
+Drivers/DshanMCU-F103/driver_uart.c \
+Drivers/DshanMCU-F103/driver_ultrasonic_sr04.c \
 Core/Src/system_stm32f1xx.c \
 Middlewares/Third_Party/FreeRTOS/Source/croutine.c \
 Middlewares/Third_Party/FreeRTOS/Source/event_groups.c \
@@ -70,9 +97,10 @@ Middlewares/Third_Party/FreeRTOS/Source/timers.c \
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c \
 Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c \
 Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3/port.c \
-Core/Src/sysmem.c \
-Core/Src/syscalls.c  \
-Core/Src/user_led.c
+nwatch/draw.c \
+nwatch/game1.c \
+nwatch/resources.c
+
 
 # ASM sources
 ASM_SOURCES =  \
@@ -140,7 +168,9 @@ C_INCLUDES =  \
 -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 \
 -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 \
 -IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
--IDrivers/CMSIS/Include
+-IDrivers/CMSIS/Include \
+-Inwatch \
+-IDrivers/DshanMCU-F103
 
 
 # compile gcc flags
